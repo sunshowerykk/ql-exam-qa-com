@@ -1,0 +1,1034 @@
+/* ************************管理员端************************ */
+.headRight {
+    background: #f5f5f5;
+}
+.adminTop {
+    top: 41px;
+}
+.testTop {
+    background: #fff;
+}
+.testTop h6 {
+    font-size: 16px;
+}
+.adminContent ul {
+    margin-bottom: 40px;
+    width: unset;
+    padding: 0.8rem;
+}
+.adminContent ul li {
+    border-radius: 4px;
+}
+.adminContent ul li .con_w {
+    width: 100%;
+}
+.con_w .w_top {
+    width: 100%;
+    height: 40px;
+    background: #db2c1b;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+.con_w .w_top p {
+    color: #fff;
+    line-height: 40px;
+}
+.con_w .w_middle {
+    padding: 14px;
+    border-bottom: 1px solid #f5f5f5;
+}
+.con_w .w_middle .w {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.con_w .w_bottom {
+    padding: 10px 10px 10px 0;
+    overflow: hidden;
+}
+.con_w .w_bottom .a_wrap a {
+    padding: 0 30px;
+    line-height: 20px;
+    color: #333;
+    text-align: center;
+    margin-left: 5px;
+    float: right;
+    display: block;
+    border: 1px solid #f5f5f5;
+    border-radius: 4px;
+}
+
+.adminContent button {
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background: #fd9f1b;
+    border: none;
+    position: absolute;
+    bottom: 0;
+}
+.adminContent button a {
+    color: #fff;
+}
+
+.color_666 {
+    color: #666;
+}
+/* 待回答问题列表 */
+.testTop .w {
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+}
+.testTop .w label {
+    display: inline-block;
+    width: 3rem;
+    line-height: 2.5rem;
+}
+.icon_downgray {
+    width: 0.5rem;
+    height: 0.3rem;
+    margin-top: 1.3rem;
+    margin-left: 0.4rem;
+}
+.waiting_for_answer .con_w .w_top {
+    background: transparent;
+}
+.waiting_for_answer .con_w .w_top .w {
+    display: flex;
+}
+.waiting_for_answer .con_w .w_top p {
+    color: #333;
+}
+.waiting_for_answer .icon_jb {
+    width: 10px;
+    height: 10px;
+    margin-top: 15px;
+    margin-right: 5px;
+}
+.waiting_for_answer .w_middle {
+    padding-bottom: 0;
+    border-bottom: unset;
+}
+.waiting_for_answer .w_middle .w {
+    display: block;
+    overflow: hidden;
+}
+.waiting_for_answer .w_middle h4 {
+    display: flex;
+    margin-bottom: 1rem;
+    float: left;
+    font-weight: 100;
+}
+.waiting_for_answer .w_middle h4 label {
+    padding: 0 10px;
+    line-height: 1rem;
+    color: #fff;
+    background: #db2c1b;
+    font-size: 10px;
+    border-radius: 40px;
+    margin-right: 0.6rem;
+}
+.waiting_for_answer .w_bottom {
+    padding: unset;
+    margin: 10px auto;
+}
+.waiting_for_answer .w_bottom .a_wrap {
+    overflow: hidden;
+    width: 70px;
+    margin: 0 auto;
+}
+.waiting_for_answer .w_bottom .a_wrap a {
+    border: 1px solid #db2c1b;
+    font-size: 10px;
+    text-align: center;
+    line-height: 1.6rem;
+    border-radius: 20px;
+    color: #db2c1b;
+    float: unset;
+    padding: unset;
+    margin: unset;
+}
+
+/* 编辑类别 */
+.waiting_for_answer .editCategory_pop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(0,0,0, .2);
+    display: none;
+    transition: all linear .3s;
+}
+.ecp {
+    width: 90%;
+    position: absolute;
+    top: 31%;
+    left: 5%;
+    border-radius: 8px;
+}
+.ecp .pop_con .title {
+    background: #db2c1b;
+    width: 100%;
+    line-height: 2.5rem;
+    text-align: center;
+    color: #fff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.ecp .pop_con .title p {
+    font-size: 10px;
+    color: #fff;
+}
+.ecp .w {
+    background: #fff;
+    padding-bottom: 0.1rem;
+}
+.ecp .w p {
+    line-height: 2.5rem;
+    text-align: center;
+}
+.ecp .w ul li {
+    background-color: #fff;
+    line-height: 2.5rem;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.ecp .w ul li:first-child {
+    background: #fef3f1;
+}
+.ecp .w ul li:first-child .icon_gou_noborder {
+    display: block;
+}
+.ecp .w button {
+    border: none;
+    outline: none;
+    width: 80%;
+    line-height: 1.6rem;
+    background: #db2c1b;
+    text-align: center;
+    color: #fff;
+    border-radius: 40px;
+    display: block;
+    margin: 1rem auto;
+}
+.icon_gou_noborder {
+    width: 1.5rem;
+    height: 1rem;
+    margin-top: 0.8rem;
+    display: none;
+}
+.icon_close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -0.8rem;
+    right: -0.8rem;
+}
+
+/* 已答问题列表 */
+.answered .testTop section {
+    display: flex;
+}
+
+/* 答疑收支管理 */
+.fee_manage .testTop section {
+    display: flex;
+    justify-content: space-around;
+}
+.fee_manage .testTop form {
+    width: 100%;
+    overflow: hidden;
+}
+.fee_manage .testTop .w {
+    float: left;
+    overflow: hidden;
+    width: calc(100% / 2 - 20px);
+    margin: 10px;
+}
+.fee_manage .testTop .w label,
+.fee_manage .testTop .w .select_w {
+    float: left;
+}
+.fee_manage ul {
+    width: 100%;
+}
+.fee_manage ul li {
+    box-shadow: unset;
+    display: block;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0 0.5rem;
+}
+.fee_manage .adminContent {
+    background-color: #fff;
+}
+.fee_manage ul li .w {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.color_333 {
+    color: #333 !important;
+}
+.color_db2c1b {
+    color: #db2c1b !important;
+}
+.color_ccc {
+    color: #ccc !important;
+}
+
+/* 创建新科目 */
+.create_subject ul {
+    background: #fff;
+}
+.create_subject ul li {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.create_subject ul li label {
+    display: block;
+    width: 20%;
+}
+.create_subject ul li .w {
+    overflow: hidden;
+}
+.create_subject .input_w {
+    height: 1.2rem;
+}
+.create_subject .input_w input {
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    border: none;
+    padding: unset !important;
+}
+.create_subject .ttb {
+    display: block;
+}
+.create_subject .ttb label {
+    width: 100%;
+}
+.create_subject .ttb .select_w {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 0.6rem;
+}
+.create_subject .ttb .each_list {
+    display: flex;
+    margin-top: 1rem;
+}
+.icon_gou {
+    background: url("../../../images/phone/dayi/icon_gou.png") no-repeat 0 0;
+    background-size: 100% 100%;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.7rem;
+}
+
+/* 添加新教师 */
+.create_teacher ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 0.8rem;
+}
+.create_teacher ul li label {
+    width: 100%;
+    line-height: 2rem;
+    display: block;
+}
+.create_teacher ul li .input_w {
+    height: 2rem;
+}
+.create_teacher input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    padding: unset;
+}
+.create_teacher .select_w {
+    overflow: hidden;
+}
+.create_teacher .select_w .each_w {
+    width: calc(100% / 3);
+    margin-bottom: 0.8rem;
+    overflow: hidden;
+    display: flex;
+    float: left;
+}
+.create_teacher .ttb {
+    display: block;
+}
+.create_teacher .select_w .each_w em {
+    display: block;
+    background: url("../../../images/phone/dayi/icon_gou.png") no-repeat 0 0;
+    background-size: 100% 100%;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.7rem;
+}
+.create_teacher .avator {
+    display: flex;
+    justify-content: flex-end;
+}
+.create_teacher .avator_pic {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+.create_teacher .icon_choose {
+    width: 0.4rem;
+    height: 0.7rem;
+    margin-top: 0.6rem;
+    margin-left: 0.3rem;
+}
+.create_teacher .ttb textarea {
+    border: none;
+    padding: unset;
+    margin: unset;
+}
+.create_teacher h4 {
+    background: #f5f5f5;
+    color: #a3a3a3;
+    line-height: 2.5rem;
+    font-size: 10px;
+    padding: 0 0.8rem;
+}
+
+/* 金币详情 */
+.fee_detail .adminContent {
+    background: #fff;
+}
+.fee_detail .adminContent ul li {
+    border: none;
+    box-shadow: none;
+}
+.fee_detail .adminContent ul li .w {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.color_999 {
+    color: #999 !important;
+}
+
+
+/* ************************学员端************************ */
+
+/* 首页 */
+.pytW ul li span{
+    display: block;
+    text-align: center;
+}
+
+.pytW ul li span img{
+    display: block;
+    margin: 0 auto;
+}
+
+.index .testTop {
+    background: #ffefed;
+}
+.index .testTop .w {
+    margin-top: 0.8rem;
+}
+.index .testTop .w ul li a {
+    color: #000;
+    text-align: center;
+}
+.index .testTop .top_w ul {
+    justify-content: space-between;
+    width: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.index .testTop .top_w ul li {
+    display: inline-block;
+    margin-right: 2.3rem;
+}
+.icon_subject {
+    width: 2rem;
+    height: 2rem;
+}
+.index .bottom_w ul {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 40px;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+}
+.index .bottom_w ul li {
+    background: #fff;
+    width: 50%;
+    line-height: 2.8rem;
+    float: left;
+    text-align: center;
+}
+.index .bottom_w ul li.active {
+    background: #db2c1b;
+    color: #fff;
+}
+.index .w_bottom {
+    display: flex;
+    padding: 0 0.6rem;
+}
+.index .w_bottom a {
+    color: #999;
+    display: flex;
+    margin-left: 1rem;
+}
+.index .w_bottom a span {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 0.8rem;
+    height: 0.8rem;
+    display: inline-block;
+    text-align: center;
+    line-height: 1rem;
+    margin-top: 0.2rem;
+    margin-left: 0.2rem;
+}
+.index .icon_choose {
+    width: 0.3rem;
+    height: 0.4rem;
+    margin-top: 0.1rem;
+    display: inline-block;
+}
+
+.index .ul_pFixd {
+    position: fixed;
+    right: 1rem;
+    bottom: 2rem;
+    z-index: 999;
+    overflow: hidden;
+}
+.index .ul_pFixd li {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+    background: transparent;
+    box-shadow: unset;
+    margin-top: 0;
+}
+.index .ul_pFixd .home_tiwen,
+.index .ul_pFixd .home_jinbi{
+    width: 100%;
+    height: 100%;
+}
+
+/* 弹窗/教师详情 */
+.index .teacherDetail_pop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(0,0,0, .2);
+    display: none;
+    transition: all linear .3s;
+}
+.tdp {
+    width: 90%;
+    position: absolute;
+    top: 31%;
+    left: 5%;
+    border-radius: 8px;
+    background: #fff;
+    transition: all linear .3s;
+}
+.tdp .title {
+    text-align: center;
+    line-height: 3rem;
+    border-bottom: 1px solid #f5f5f5;
+}
+.tdp .title p {
+    font-size: 16px;
+}
+.tdp .w {
+    padding: 0 1rem;
+    margin: 1rem 0;
+    display: flex;
+}
+.tdp .w p {
+    line-height: 1.5rem;
+}
+.tdp .w .txt {
+    display: flex;
+    margin: 0.4rem 0;
+}
+.tdp .w .txt span {
+    width: 5rem;
+}
+.tdp .avator_w {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: 0.7rem;
+}
+.tdp .avator_pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.tdp .image_zaixian {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.4rem;
+    display: inline-block;
+}
+.tdp .icon_closeb {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    left: 48%;
+    margin-top: 7rem;
+}
+.color_999 {
+    color: #999;
+}
+.color_de4334 {
+    color: #de4334
+}
+.color_fad532 {
+    color: #fad532
+}
+
+/* 弹窗/去充值 */
+.index .recharge_pop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(0,0,0, .2);
+    display: none;
+    transition: all linear .3s;
+}
+.rp {
+    width: 80%;
+    position: absolute;
+    top: 31%;
+    left: 8%;
+    border-radius: 8px;
+    background: #fff;
+    padding: 1rem 0;
+    transition: all linear .3s;
+}
+.rp .w {
+    text-align: center;
+    margin: 1rem auto;
+}
+.rp .image_jinbired {
+    width: 5rem;
+    height: 5rem;
+    margin: 0 auto;
+}
+.rp .w p {
+    line-height: 1.5rem;
+}
+.rp button {
+    width: 10.5rem;
+    line-height: 2rem;
+    color: #fff;
+    background: #db2c1b;
+    border-radius: 40px;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+.rp .icon_closeb {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    left: 48%;
+    margin-top: 7rem;
+}
+.fz1rem {
+    font-size: 16px;
+}
+
+/* 问题详情 */
+.index_detail {
+    padding-top: 1rem;
+}
+.index_detail .con {
+    padding: 0 1rem;
+}
+.index_detail .con .w {
+    width: 100%;
+    display: flex;
+    margin-top: 0.8rem;
+}
+.index_detail .con .ttb {
+    display: block;
+}
+.index_detail .con .w .avator_pic {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+.index_detail .con .w .txt_w {
+    margin-top: 0.1rem;
+}
+.index_detail .con .w .exam_paper {
+    margin: 0.8rem auto;
+}
+.index_detail .con .w ul {
+    overflow: hidden;
+    margin-top: 1rem;
+}
+.index_detail .con .w ul li {
+    float: left;
+    display: flex;
+    width: 33%;
+}
+.icon_select {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.8rem;
+}
+.bb1f5f5f5 {
+    display: block;
+    border-bottom: 1px solid #f5f5f5;
+}
+.color_a9a9a9 {
+    color: #a9a9a9;
+}
+
+/* 提问 */
+.put_Q {
+    /*margin-bottom: 63px;*/
+}
+.put_Q .testTop {
+    background: #fff;
+}
+.put_Q .testTop .ltr {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.put_Q .testTop .ltr label {
+    width: 20%;
+    line-height: 2rem;
+}
+.put_Q .testTop .ltr .select_w {
+    width: 80%;
+    line-height: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+}
+.put_Q .testTop .ltr .select_w select {
+    padding: 0;
+    margin: 0;
+}
+.put_Q .testTop .ltr .select_w select option {
+    text-align: right;
+}
+.image_tjtp {
+    width: 4rem;
+    height: 4rem;
+}
+.put_Q .icon_choose {
+    width: 0.5rem;
+    height: 0.8rem;
+    margin-top: 0.6rem;
+    margin-left: 0.2rem;
+}
+.put_Q .adminContent {
+    background-color: #fff;
+}
+.put_Q .adminContent .w {
+    padding: 1rem;
+}
+.put_Q .adminContent .w textarea {
+    border: none;
+    padding-left: unset;
+    padding-right: unset;
+}
+.put_Q .adminContent .ltr {
+    display: flex;
+    justify-content: space-between;
+}
+.put_Q .adminContent button {
+    width: 90%;
+    line-height: 2.2rem;
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    background: #db2c1b;
+    margin: 1rem auto;
+    display: block;
+    border: none;
+    outline: none;
+    position: unset;
+}
+.playmusic {
+    margin: 0 auto 20px;
+    width: 88%;
+}
+.sW_each {
+    display: none;
+}
+.sW_each.on {
+    display: block;
+}
+.sW_each .wA {
+    text-align: center;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+.sW_each .wA ul {
+    width: 94%;
+    margin-bottom: 4px;
+}
+.sW_each .wA ul li {
+    background: #db2c1b;
+    box-shadow: none;
+    color: #fff;
+    text-align: center;
+    line-height: 2.5rem;
+    display: block;
+}
+.sW_each .wA ul li:last-child {
+    background: #ccc;
+}
+.wB {
+    padding-top: 3rem;
+    text-align: center;
+}
+.wB p {
+    font-size: 48px;
+    color: #20c514;
+}
+.icon_play {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto 1rem;
+}
+
+/* 我的问题列表 */
+.myQ .testTop,
+.myQ .adminContent {
+    background: #fff0ed;
+}
+.myQ .testTop .top_W {
+    margin-top: 0;
+}
+.myQ .testTop .top_W ul {
+    border-bottom: 1px solid #e6e6e6;
+    width: 100%;
+}
+.myQ .testTop .top_W ul li {
+    width: 50%;
+    line-height: 2.5rem;
+    text-align: center;
+    color: #a9a9a9;
+    margin-right: 0;
+}
+.myQ .testTop .top_W ul li.active {
+    color: #db2c1b;
+    background: unset;
+    border-bottom: 1px solid #db2c1b;
+}
+.myQ .testTop h6 {
+    background: #fff;
+}
+.myQ .con_w .w_middle {
+    padding: 0 1rem;
+}
+.myQ .adminContent .w {
+    padding: unset;
+}
+.myQ .color_a9a9a9 {
+    color: #a9a9a9 !important;
+}
+
+/* *************************** 教师端 *************************** */
+.findteach2 .testTop .w {
+    margin: 0.8rem 0;
+}
+.findteach2 .testTop .bottom_w {
+    border-top: 1px solid #ffe5e0;
+    padding-top: 0.5rem;
+}
+.findteach2 .testTop .bottom_w .w {
+    width: calc(100% / 2);
+    margin-top: 0;
+}
+.findteach2 .adminContent ul {
+    padding-top: 0;
+}
+.findteach2 .select_w,
+.fee_manage .select_w {
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    background: #f5f5f5;
+    position: relative;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+}
+.findteach2 .select_w select,
+.fee_manage .select_w select {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    text-indent: 1rem;
+    padding: 0;
+    border-radius: 4px;
+}
+.findteach2 .select_w .icon_downgray,
+.fee_manage .select_w .icon_downgray {
+    position: absolute;
+    top: -4px;
+    right: 8px;
+    width: 10px;
+    height: 7px;
+}
+
+/* 回答问题 */
+.aq .adminContent ul {
+    padding: 0;
+}
+.aq .aq_w {
+    margin: 0.8rem 0;
+    padding: 0 1rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+.aq .ttb {
+    justify-content: flex-start;;
+}
+.aq .ttb span {
+    line-height: 2rem;
+}
+.aq .aq_w .w {
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 1rem;
+    overflow: hidden;
+}
+.aq .aq_w h4 {
+    display: flex;
+    margin-bottom: 0.8rem;
+    font-weight: 100;
+}
+.aq .img_w {
+    padding: 0.5rem;
+}
+.aq .w_jinbi {
+    display: flex;
+    float: right;
+}
+.aq .icon_jb {
+    margin-top: 4px;
+}
+.icon_yuyin {
+    width: 1rem;
+    height: 1.5rem;
+}
+.image_zt {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.8rem;
+}
+.aq .w_bottom .a_wrap a {
+    background: #1e68bf;
+    color: #fff;
+    border: none;
+}
+.fz01 {
+    font-size: 12px;
+}
+.aq textarea {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+.aq .aq_w label {
+    float: left;
+}
+.aq .input_w {
+    float: right;
+    display: flex;
+}
+.aq .icon_choose {
+    width: 0.5rem;
+    height: 1rem;
+    margin-left: 0.4rem;
+}
+.aq .adminContent {
+    background-color: #f5f5f5;
+}
+.aq button {
+    width: 94%;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background: #db2c1b;
+    border: none;
+    position: unset;
+    margin: 0 auto 13px;
+    display: block;
+}
+.aq ul {
+    margin-bottom: 13px;
+}
+
+/* 问题详情 */
+.qd .avator_w {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 0.7rem;
+}
+.qd .avator_pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.qd .txt_w {
+    margin-top: 0.2rem;
+}
+.qd .adminContent {
+    background-color: #fff;
+}
+.qd .adminContent ul {
+    padding: 0;
+    margin-bottom: 10px;
+}
+.qd .adminContent ul li {
+    box-shadow: unset;
+}
+
+.solid_line {
+    width: 100%;
+    height: 1px;
+    background: #f5f5f5;
+}
+.qd .adminContent .w {
+    padding: 0 1rem;
+}
+.qd .adminContent .w label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 0.6rem;
+}
+.qd .adminContent .radio_w {
+    display: flex;
+    padding: 0 0.5rem;
+}
