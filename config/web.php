@@ -53,9 +53,9 @@ $config = [
         //'db' => require(__DIR__ . '/db.php'),
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=exam',
-            'username' => 'root',
-            'password' => 'root',
+            'dsn' => 'mysql:host=47.104.216.133;dbname=ql_exam_qa',
+            'username' => 'exam',
+            'password' => 'exam@#$123',
             'charset' => 'utf8',
         ],
     ],
