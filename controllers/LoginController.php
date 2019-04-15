@@ -40,6 +40,7 @@ class LoginController extends Controller
         $this->layout = 0;
         $req = Yii::$app->request;
         $access_token = $req->get('access-token',"");
+        $from = $req->get('from');
         if(!empty($access_token)){
             yii::$app->session['access-token']=$access_token;
             $url="https://api.kaoben.top/users/islogin?access-token=".$access_token;
@@ -63,7 +64,11 @@ class LoginController extends Controller
                 }
                 if($model->load($post)) {
                     if($model->login()){ //登陆成功
-                        return $this->redirect('/');
+                        if ($from === 'qa') {
+                            return $this->redirect('/?r=student/answermanage');
+                        } else {
+                            return $this->redirect('/');
+                        }
                     }else//登陆失败
                         $status = '用户名或密码错误，登录失败';
                     return $this->renderContent($status);
@@ -71,6 +76,11 @@ class LoginController extends Controller
                     $status = '系统错误！';
                     return $this->renderContent($status);
                 }
+            } else {
+                return json_encode([
+                    'status' => -1,
+                    'message' => '账号未登录'
+                ]);
             }
         }else{
             $post = Yii::$app->request->post();
