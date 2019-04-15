@@ -52,7 +52,7 @@ class LoginController extends Controller
             $output = curl_exec($ch); //释放curl句柄
             curl_close($ch);
             $data=json_decode($output,true);
-            if($data['status']==1){
+            if($data['status'] == 0) {
                 yii::$app->session['studentuser']=$data['user'];
                 $_csrf =Yii::$app->request->csrfToken;
                 $post=array("_csrf"=>$_csrf,"LoginForm"=>array("UserName"=>"student","UserPwd"=>"admin"));
