@@ -11,11 +11,11 @@ use yii\debug\models\search\Db;
 
 class TeachmanageController extends BaseController
 {
-    public $ak = 'bRfl2x63mooBtipUfCAL0ia7_twu7-L3Usv14Ck4';
-    public $sk = 'sxLjrxpoNlaJ0VzmCbNWLAIA5G667_5JKM_UQ3ku';
-    public $domain = 'pm4gmozbu.bkt.clouddn.com';//在https://portal.qiniu.com/bucket/bucket/index页面查看
-    public $bucket='exam';
-    public $zone='east_china';
+    public $ak = 'BpA5RUTf1eWdiDpsRrosEJ-i9CroZjj9Gi4NOw5t';
+    public $sk = 'errjOOqxbwghY96t1a4bSP-ERR-42bHqEI_4H-15';
+    public $domain = 'sd.answer.kaoben.top';//在https://portal.qiniu.com/bucket/bucket/index页面查看
+    public $bucket='sd-ben-answer';
+    public $zone='north_china';
     public function beforeAction($action)
     {
         return $this->renderContent(langs::get('noright'));
