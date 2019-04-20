@@ -96,7 +96,7 @@ overflow: hidden;
 	background-color: #db2c1b;
 	position: fixed;
 	left: 0px;
-	top: 44px;
+	top: 0;
 	z-index: 4000;
 }
 
@@ -170,6 +170,10 @@ overflow: hidden;
 	font-size:15px;
 	color: #fff;
 	margin-left: 0.25em;
+	max-width: 100px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 /*menuBg*/
