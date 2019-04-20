@@ -55,7 +55,7 @@ echo Html::jsFile('assets/js/examphone/js/menu.js');
             <?elseif (Yii::$app->user->identity->RoleID==3):?>
                 <figure class="userPop">
                     <img src="assets/images/phone/images/guser.png" />
-                    <figcaption>学员端</figcaption>
+                    <figcaption><?= yii::$app->session['studentuser']['username'] ?></figcaption>
                 </figure>
             <?else:?>
                 <figure class="userPop">
