@@ -23,11 +23,11 @@ echo Html::jsFile('assets/js/examphone/js/menu.js');
 <html>
 <head>
     <meta charset="utf-8">
-    <title>考试系统</title>
+    <title>答疑考试系统</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>考试系统</title>
+    <title>答疑考试系统</title>
 
 
 </head>
@@ -39,7 +39,7 @@ echo Html::jsFile('assets/js/examphone/js/menu.js');
     <!--头部-->
     <!-- <header class="mui-bar mui-bar-nav adminHead">
         <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-        <h1 class="mui-title">考试系统</h1>
+        <h1 class="mui-title">答疑考试系统</h1>
     </header> -->
     <article class="adminTop">
         <section class="adminTopCen">

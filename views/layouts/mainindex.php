@@ -18,7 +18,7 @@ echo Html::jsFile('assets/js/exam/rem.js?r='.time());
 <head>
     <meta charset="UTF-8">
 <!--->
-    <title>都想学考试系统</title>
+    <title>都想学答疑考试系统</title>
 </head>
 
 <body>
