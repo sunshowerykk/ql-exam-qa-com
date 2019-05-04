@@ -42,45 +42,50 @@ class LoginController extends Controller
         $access_token = $req->get('access-token',"");
         $from = $req->get('from');
         if(!empty($access_token)){
-            yii::$app->session['access-token']=$access_token;
-            $url="https://api.kaoben.top/users/islogin?access-token=".$access_token;
-            $ch = curl_init(); //设置选项，包括URL
-            curl_setopt($ch, CURLOPT_URL, $url);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-            curl_setopt($ch, CURLOPT_HEADER, 0);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);//绕过ssl验证
-            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-            $output = curl_exec($ch); //释放curl句柄
-            curl_close($ch);
-            $data=json_decode($output,true);
-            if($data['status'] == 0) {
-                yii::$app->session['studentuser']=$data['user'];
-                $_csrf =Yii::$app->request->csrfToken;
-                $post=array("_csrf"=>$_csrf,"LoginForm"=>array("UserName"=>"student","UserPwd"=>"admin"));
-                $model = new LoginForm();
-                if ($post['LoginForm']['UserPwd']=='' or $post['LoginForm']['UserName']=='' ){
-                    $status = '用戶名和密碼必須輸入!';
-                    return $this->renderContent($status);
-                }
-                if($model->load($post)) {
-                    if($model->login()){ //登陆成功
-                        if ($from === 'qa') {
-                            return $this->redirect('/?r=student/answermanage');
-                        } else {
-                            return $this->redirect('/');
-                        }
-                    }else//登陆失败
-                        $status = '用户名或密码错误，登录失败';
-                    return $this->renderContent($status);
-                }else{
-                    $status = '系统错误！';
-                    return $this->renderContent($status);
-                }
+            if ($access_token === 'get') {
+                $url = 'https://mobile.kaoben.top/Login';
+                header("Location: $url");
             } else {
-                return json_encode([
-                    'status' => -1,
-                    'message' => '账号未登录'
-                ]);
+                yii::$app->session['access-token']=$access_token;
+                $url="https://api.kaoben.top/users/islogin?access-token=".$access_token;
+                $ch = curl_init(); //设置选项，包括URL
+                curl_setopt($ch, CURLOPT_URL, $url);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                curl_setopt($ch, CURLOPT_HEADER, 0);
+                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);//绕过ssl验证
+                curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+                $output = curl_exec($ch); //释放curl句柄
+                curl_close($ch);
+                $data=json_decode($output,true);
+                if($data['status'] == 0) {
+                    yii::$app->session['studentuser']=$data['user'];
+                    $_csrf =Yii::$app->request->csrfToken;
+                    $post=array("_csrf"=>$_csrf,"LoginForm"=>array("UserName"=>"student","UserPwd"=>"admin"));
+                    $model = new LoginForm();
+                    if ($post['LoginForm']['UserPwd']=='' or $post['LoginForm']['UserName']=='' ){
+                        $status = '用戶名和密碼必須輸入!';
+                        return $this->renderContent($status);
+                    }
+                    if($model->load($post)) {
+                        if($model->login()){ //登陆成功
+                            if ($from === 'qa') {
+                                return $this->redirect('/?r=student/answermanage');
+                            } else {
+                                return $this->redirect('/');
+                            }
+                        }else//登陆失败
+                            $status = '用户名或密码错误，登录失败';
+                        return $this->renderContent($status);
+                    }else{
+                        $status = '系统错误！';
+                        return $this->renderContent($status);
+                    }
+                } else {
+                    return json_encode([
+                        'status' => -1,
+                        'message' => '账号未登录'
+                    ]);
+                }
             }
         }else{
             $post = Yii::$app->request->post();
