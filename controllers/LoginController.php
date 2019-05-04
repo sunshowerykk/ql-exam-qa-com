@@ -44,7 +44,7 @@ class LoginController extends Controller
         if(!empty($access_token)){
             if ($access_token === 'get') {
                 $url = 'https://mobile.kaoben.top/Login';
-                header("Location: $url");
+                return $this->redirect($url);
             } else {
                 yii::$app->session['access-token']=$access_token;
                 $url="https://api.kaoben.top/users/islogin?access-token=".$access_token;
