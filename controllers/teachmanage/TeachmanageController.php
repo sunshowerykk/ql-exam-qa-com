@@ -260,7 +260,7 @@ class TeachmanageController extends BaseController
         }else {
             $this->layout = "mainindex"; //指定框架
         }
-        $json = file_get_contents("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxa9123996375fbbe7&secret=59d3a91f00163846d83292a9ef7c5dd8");
+        $json = file_get_contents("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxa9123996375fbbe7&secret=52704b53f8910d39f3491970be1903a4");
         //echo $json;
         //exit();
         $arr = json_decode($json,true);
